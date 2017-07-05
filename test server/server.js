@@ -8,7 +8,11 @@ const cors = require('cors');
 const expressValidator = require('express-validator');
 // var expressValidator = require('express-validator');
 const Payment = require("./payments");
+<<<<<<< HEAD
 // this is a comment on line 11
+=======
+// creating conflict on line 11
+>>>>>>> conflict
 
 const app = express();
 
