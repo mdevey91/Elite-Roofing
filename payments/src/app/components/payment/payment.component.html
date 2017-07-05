@@ -1,0 +1,29 @@
+
+<div class="jumbotron payment-form">
+  <h2 class="page-header">Payments</h2>
+  <form [formGroup]="form"(submit)="submitPayment()">
+    <div class="form-group">
+      <label>Payment:</label>
+      <input type="number" class="form-control" formControlName = "payment">
+    </div>
+    <div class="form-group">
+      <label>Date:</label>
+      <!--<input [ngModel]="newDate | date:'yyyy-MM-dd'" (ngModelChange)="newDate = $event" type="date" name="newDate"/>-->
+      <input type="date" class="form-control" formControlName="date">
+    </div>
+    <input type="submit" class="btn btn-primary" value="Submit Payment">
+  </form>
+</div>
+<div class="jumbotron">
+  <table>
+    <tr>
+      <th>amount</th>
+      <th>date</th>
+    </tr>
+    <tr *ngFor="let payment of allPayments">
+      <td>${{payment.payment}}</td>
+      <td>{{payment.date}}</td>
+    </tr>
+  </table>
+</div>
+
