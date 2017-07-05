@@ -21,5 +21,5 @@ export class PaymentService {
     return this.http.get('http://localhost:3000/payments', {headers: headers}) //there is not user because we are not sending data, we are receiving
       .map(res => res.json());
   }
-
+//  this is a comment
 }
